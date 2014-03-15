@@ -25,6 +25,12 @@ my $count_list = () = (1..3);
 say @list_converted_to_array;
 say $count_list;
 
+my @foo;
+$foo[0] = 4;
+$foo[1] = 5;
+$foo[2] = 6;
+say @foo;
+
 # count list again with temp var
 say "";
 say "# count list again with temp var";
