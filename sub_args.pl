@@ -1,8 +1,7 @@
+#!/usr/bin/env perl
 
-sub fn1 {
-    my $a1, $a2 = shift, shift;
-    print $a1, $a2
-}
+use Modern::Perl 2011;
+use autodie;
 
 sub fn2 {
     my $a1 = shift;
@@ -10,8 +9,20 @@ sub fn2 {
     print $a1, $a2
 }
 
-fn1 1, 2;
-# => 1
+sub fn3 {
+    my ($a1, $a2, $a3) = @_;
+    print $a1, $a2, $a3;
+}
 
 fn2 1, 2;
 # => 12
+
+say "";
+
+fn3 1,2,3;
+# => 123
+
+say "";
+
+fn3 1..3;
+# => 123
